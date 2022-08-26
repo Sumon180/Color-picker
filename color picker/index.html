@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+</head>
+<body>
+    <h1>Sumon Hossain</h1>
+    <input type="text" id="hexaNumber"><br><br>
+    <input type="color" id="color">
+
+
+    <script>
+        let hexaNumber = document.getElementById("hexaNumber");
+        let color = document.getElementById("color");
+
+        color.addEventListener('input',() => {
+            let InputColor = color.value;
+            hexaNumber.value = InputColor;
+            document.getElementsByTagName('h1')[0].style.color=InputColor;
+            document.body.style.backgroundColor=InputColor;
+
+        })
+
+
+    </script>
+    
+</body>
+</html>
